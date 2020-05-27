@@ -1,0 +1,49 @@
+<svg width="4320" height="600" viewBox="-1500 50 4320 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g fill="#fff" fill-opacity="0.85">
+    <ellipse ry="224" rx="273" cy="684" cx="47"  />
+    <ellipse ry="400" rx="340" cy="830" cx="-180" />
+    <ellipse ry="101" rx="137" cy="551" cx="1483" />
+    <ellipse ry="267" rx="441" cy="723" cx="1324" />
+    <ellipse ry="205" rx="441" cy="710" cx="309" />
+    </g>
+    <ellipse ry="400" rx="340" cy="830" cx="-180" fill="url(#dark)" />
+    <ellipse ry="224" rx="273" cy="684" cx="47" fill="url(#regular)" />
+    <!-- <ellipse ry="113" rx="428" cy="630" cx="430" fill="url(#regular)" /> -->
+    <ellipse ry="105" rx="197" cy="808" cx="1272" fill="url(#regular)" />
+    <ellipse ry="267" rx="441" cy="723" cx="1324" fill="url(#regular)" />
+    <ellipse ry="101" rx="137" cy="551" cx="1483" fill="url(#regular)" />
+    <ellipse ry="99" rx="148" cy="610" cx="880" fill="url(#regular)" />
+    <ellipse ry="205" rx="441" cy="710" cx="309" fill="url(#regular)" />
+    <ellipse ry="300" rx="794" cy="830" cx="592" fill="url(#light-opaque)" />
+    <ellipse ry="580" rx="560" cy="1140" cx="2177.8152" fill="url(#regular)" />
+    <ellipse ry="220" rx="440" cy="750" cx="1880" fill="url(#dark)" />
+    <ellipse ry="260" rx="420" cy="700" cx="-540" fill="url(#light)" />
+    <ellipse ry="164" rx="294" cy="760" cx="2364.0569" fill="url(#regular)" />
+    <ellipse rx="580" ry="496" cy="1034" cx="-860" fill="url(#regular)" />
+    <defs>
+        <radialGradient id="dark-opaque" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop stop-color="#e0e0e0" stop-opacity="0.8"/>
+            <stop offset="1" stop-color="#e0e0e0" stop-opacity="1"/>
+        </radialGradient>
+        <radialGradient id="regular-opaque" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop stop-color="#eaeaea" stop-opacity="0.8"/>
+            <stop offset="1" stop-color="#eaeaea" stop-opacity="1"/>
+        </radialGradient>
+        <radialGradient id="light-opaque" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop stop-color="#f3f3f3" stop-opacity="1"/>
+            <stop offset="1" stop-color="#f3f3f3" stop-opacity="0.7"/>
+        </radialGradient>
+        <radialGradient id="regular" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop stop-color="#C4C4C4" stop-opacity="0.56"/>
+            <stop offset="1" stop-color="#C4C4C4" stop-opacity="0.31"/>
+        </radialGradient>
+        <radialGradient id="light" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop stop-color="#C4C4C4" stop-opacity="0.28"/>
+            <stop offset="1" stop-color="#C4C4C4" stop-opacity="0.23"/>
+        </radialGradient>
+        <radialGradient id="dark" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop stop-color="#C4C4C4" stop-opacity="0.77"/>
+            <stop offset="1" stop-color="#C4C4C4" stop-opacity="0.37"/>
+        </radialGradient>
+    </defs>
+</svg>

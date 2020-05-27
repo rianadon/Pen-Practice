@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg fill="none" viewBox="-1440 50 8000 8000" xmlns="http://www.w3.org/2000/svg">
+    <ellipse fill="url(#regular)" ry="224" rx="273" cy="6686" cx="3440" />
+    <ellipse fill="url(#light)" ry="113" rx="428" cy="1417" cx="-720" />
+    <ellipse fill="url(#regular)" ry="105" rx="197" cy="1590" cx="1640" />
+    <ellipse fill="url(#regular)" ry="267" rx="441" cy="4490" cx="800" />
+    <ellipse fill="url(#regular)" ry="101" rx="137" cy="1590" cx="2320" />
+    <ellipse fill="url(#regular)" ry="99" rx="148" cy="1791" cx="6280" />
+    <ellipse fill="url(#regular)" ry="205" rx="441" cy="1645" cx="-960" />
+    <ellipse fill="url(#dark)" ry="300" rx="794" cy="6950" cx="2960" />
+    <ellipse fill="url(#dark)" ry="580" rx="560" cy="1290" cx="-1440" />
+    <ellipse fill="url(#regular)" ry="400" rx="340" cy="7430" cx="2400" />
+    <ellipse fill="url(#regular)" ry="220" rx="440" cy="1410" cx="2000" />
+    <ellipse fill="url(#regular)" ry="240" rx="400" cy="3450" cx="4480" />
+    <ellipse fill="url(#regular)" ry="220" rx="480" cy="4650" cx="440" />
+    <ellipse fill="url(#light)" ry="260" rx="420" cy="3170" cx="4320" />
+    <ellipse fill="url(#light)" ry="164" rx="294" cy="810" cx="6200" />
+    <ellipse fill="url(#regular)" rx="580" ry="496" cy="3650" cx="4160" />
+    <ellipse fill="url(#regular)" rx="500" ry="600" cy="5250" cx="560" />
+    <ellipse fill="url(#regular)" rx="500" ry="600" cy="4890" cx="40" />
+    <ellipse rx="560" ry="580" fill="url(#dark)" id="ellipse18-3" style="fill:url(#radialGradient909-3)" />
+    <defs>
+        <radialGradient id="regular" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop stop-color="#C4C4C4" stop-opacity="0.56"/>
+            <stop offset="1" stop-color="#C4C4C4" stop-opacity="0.31"/>
+        </radialGradient>
+        <radialGradient id="light" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop stop-color="#C4C4C4" stop-opacity="0.28"/>
+            <stop offset="1" stop-color="#C4C4C4" stop-opacity="0.23"/>
+        </radialGradient>
+        <radialGradient id="dark" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop stop-color="#C4C4C4" stop-opacity="0.77"/>
+            <stop offset="1" stop-color="#C4C4C4" stop-opacity="0.37"/>
+        </radialGradient>
+    </defs>
+</svg>
