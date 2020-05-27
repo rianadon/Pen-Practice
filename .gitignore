@@ -1,0 +1,9 @@
+/node_modules/
+/public/build/
+
+.DS_Store
+
+# the package.json is just for building the website,
+# so who cares if dependencies mismatch a little?
+# Let's hope this doesn't break anything
+package_lock.json

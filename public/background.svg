@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="4320" height="600" viewBox="-1440 50 4320 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="1299" cy="370" rx="273" ry="224" fill="url(#regular)"/>
+    <ellipse cx="931" cy="-24" rx="428" ry="113" fill="url(#light)"/>
+    <ellipse cx="168" cy="-12" rx="197" ry="105" fill="url(#regular)"/>
+    <ellipse cx="116" cy="93" rx="441" ry="267" fill="url(#regular)"/>
+    <ellipse cx="14" cy="360" rx="137" ry="101" fill="url(#regular)"/>
+    <ellipse cx="618" cy="48" rx="148" ry="99" fill="url(#regular)"/>
+    <ellipse cx="1131" cy="67" rx="441" ry="205" fill="url(#regular)"/>
+    <ellipse cx="848" cy="-138" rx="794" ry="300" fill="url(#dark)"/>
+    <ellipse cx="-680" cy="-100" rx="560" ry="580" fill="url(#dark)" />
+    <ellipse cx="1780" cy="80" rx="340" ry="400" fill="url(#regular)" />
+    <ellipse cx="-480" cy="380" rx="440" ry="220" fill="url(#regular)" />
+    <ellipse cx="2320" cy="-120" rx="400" ry="240" fill="url(#regular)" />
+    <ellipse cx="-1240" cy="-180" rx="480" ry="220" fill="url(#regular)" />
+    <ellipse cx="1980" cy="380" rx="420" ry="260" fill="url(#light)" />
+    <ellipse cx="-894" cy="276" rx="294" ry="164" fill="url(#light" />
+    <ellipse cx="2260" cy="16" ry="496" rx="580" fill="url(#regular)" />
+    <ellipse cx="2880" cy="40" ry="600" rx="500" fill="url(#regular)" />
+    <ellipse cx="-1440" cy="40" ry="600" rx="500" fill="url(#regular)" />
+    <defs>
+        <radialGradient id="regular" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop stop-color="#C4C4C4" stop-opacity="0.56"/>
+            <stop offset="1" stop-color="#C4C4C4" stop-opacity="0.31"/>
+        </radialGradient>
+        <radialGradient id="light" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop stop-color="#C4C4C4" stop-opacity="0.28"/>
+            <stop offset="1" stop-color="#C4C4C4" stop-opacity="0.23"/>
+        </radialGradient>
+        <radialGradient id="dark" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop stop-color="#C4C4C4" stop-opacity="0.77"/>
+            <stop offset="1" stop-color="#C4C4C4" stop-opacity="0.37"/>
+        </radialGradient>
+    </defs>
+</svg>
