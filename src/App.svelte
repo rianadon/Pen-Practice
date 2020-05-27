@@ -30,10 +30,12 @@
 
  $: fonts = fetch('https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyBJybYSm5NLrsS7pzp1Pf0LrX62k2E8_Ns&sort=' + sort, {
      referrerPolicy: 'no-referrer',
+     mode: 'cors',
      cache: sortcache.has(sort) ? 'force-cache' : 'default'
  })
      .then(res => res.json())
      .then(res => fetchedFonts = clean(res.items))
+     .then(() => waitForLoad())
 
  $: filteredFonts = fetchedFonts.filter(font => {
      return (styles.length ? styles : defaultStyles).includes(font.category)
@@ -50,6 +52,17 @@
              variants: [100, 200, 300, 400, 500],
          })
      }
+ }
+
+ function waitForLoad() {
+     if (document.readyState === 'complete') return Promise.resolve()
+     return new Promise((resolve) => {
+         const wait = () => {
+             if (document.readyState === 'complete') setTimeout(resolve, 1000);
+             else setTimeout(wait, 500)
+         }
+         wait()
+     })
  }
 </script>
 {#if numCols > 2}
@@ -98,7 +111,7 @@
         </button>
     </div>
 </section>
-<section class="fonts flex margined">
+<section class="fonts margined">
     {#await fonts}
         <!-- Loading screen -->
 	    {#each Array(numChosen) as _}
