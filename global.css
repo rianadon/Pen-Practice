@@ -1,7 +1,7 @@
 html, body {
 	position: relative;
 	width: 100%;
-	height: 100%;
+	min-height: 100%;
 }
 
 body {
@@ -13,6 +13,17 @@ body {
     letter-spacing: 0.05em;
 }
 
+/* body::before { */
+/*     content: ""; */
+/*     position: absolute; */
+/*     top: calc(12vw + 400px); */
+/*     bottom: 0; */
+/*     left: 0; */
+/*     right: 0; */
+/*     background: repeat top center / 300% auto url('./blobs.svg'); */
+/*     z-index: -1; */
+/* } */
+
 main {
     margin: 0 auto;
     width: 90%;
@@ -23,7 +34,7 @@ main {
 
 .shadowed {
     background-color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 4px 4px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 2px 4px;
 }
 
 .margined {
@@ -56,6 +67,7 @@ p {
 .fit-width {
     width: 100%;
     height: auto;
+    z-index: 2;
 }
 
 h1 {
@@ -79,7 +91,7 @@ input, button, select {
 
 button {
 	color: #333;
-    font-weight: 600;
+    font-weight: bold;
 	background-color: #fff;
 	outline: none;
     height: 2.4em;
@@ -272,34 +284,6 @@ button:focus::before {
     margin-top: 0.2em;
 }
 
-@media print {
-    h1, p, svg, section:not(.fonts) {
-        display: none;
-    }
-
-    body {
-        background-image: none;
-        padding: 0;
-    }
-
-    main {
-        width: 100%;
-    }
-
-    .padded, .fonts {
-        padding: 0;
-        margin: 0;
-    }
-
-    .shadowed {
-        box-shadow: none;
-    }
-
-    .font {
-        height: 4cm;
-    }
-}
-
 .sidebar {
     position: fixed;
     left: 0;
@@ -338,6 +322,57 @@ button:focus::before {
 
 .disp-small {
     display: none;
+}
+
+footer {
+    height: 80px;
+    padding-top: 120px;
+    margin-top: -100px;
+    line-height: 80px;
+    background: no-repeat bottom center / 2880px auto url('./bottom.svg');
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    font-weight: bold;
+}
+
+a {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid #000;
+    line-height: 1.1;
+}
+
+a:hover { line-height: 1.3; }
+.dot { margin: 0 0.1em; }
+
+@media print {
+    h1, p, svg, section:not(.fonts), footer {
+        display: none;
+    }
+
+    body {
+        background-image: none;
+        padding: 0;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .padded, .fonts {
+        padding: 0;
+        margin: 0;
+    }
+
+    .shadowed {
+        box-shadow: none;
+    }
+
+    .font {
+        height: 4cm;
+    }
 }
 
 @media screen {
@@ -406,8 +441,6 @@ button:focus::before {
 }
 
 @media screen and (min-width: 1800px) {
-    body {
-        background-size: 5400px auto;
-        padding-top: 130px;
-    }
+    body, body::before { background-size: 5400px auto; }
+    body { padding-top: 130px; }
 }

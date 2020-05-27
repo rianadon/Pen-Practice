@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg width="4320" height="600" viewBox="-1440 50 4320 600" fill="none" xmlns="http://www.w3.org/2000/svg">
     <ellipse cx="1299" cy="370" rx="273" ry="224" fill="url(#regular)"/>
     <ellipse cx="931" cy="-24" rx="428" ry="113" fill="url(#light)"/>
@@ -14,7 +13,7 @@
     <ellipse cx="2320" cy="-120" rx="400" ry="240" fill="url(#regular)" />
     <ellipse cx="-1240" cy="-180" rx="480" ry="220" fill="url(#regular)" />
     <ellipse cx="1980" cy="380" rx="420" ry="260" fill="url(#light)" />
-    <ellipse cx="-894" cy="276" rx="294" ry="164" fill="url(#light" />
+    <ellipse cx="-894" cy="276" rx="294" ry="164" fill="url(#light)" />
     <ellipse cx="2260" cy="16" ry="496" rx="580" fill="url(#regular)" />
     <ellipse cx="2880" cy="40" ry="600" rx="500" fill="url(#regular)" />
     <ellipse cx="-1440" cy="40" ry="600" rx="500" fill="url(#regular)" />
