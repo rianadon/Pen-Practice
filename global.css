@@ -127,15 +127,16 @@ button:hover,
     vertical-align: top;
     box-sizing: border-box;
     width: 50%;
-    padding: 4px;
+    padding: 1.2mm;
     page-break-inside: avoid;
+    overflow: hidden;
+    line-height: 1.5;
 }
 
 .fontline {
     letter-spacing: 0;
-    font-size: 0.2in;
     color: #aaa;
-    margin: 2px;
+    margin: 0.6mm;
     text-decoration: underline overline;
     text-decoration-color: #eee;
     text-decoration-skip: none;
@@ -371,7 +372,12 @@ a:hover { line-height: 1.3; }
     }
 
     .font {
-        height: 4cm;
+        overflow: visible;
+    }
+
+    /* Hacks for firefox (can't seem to print flexes over 1 page) */
+    .flex, .flex-column, .fonts {
+        display: block;
     }
 }
 
