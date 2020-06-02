@@ -1,19 +1,30 @@
 <script context="module">
- export const defaultPageHeight = 279
+ const A4 = [210, 297]
+ const A5 = [148, 210]
+ const A6 = [105, 148]
+ const LEGAL = [216, 356]
+ const LETTER = [216, 279]
+
+ export const defaultPageSize = LETTER
+ export const defaultMargin = 25
 </script>
 <script>
- export let pageHeight
+ export let pageSize
  export let numPages
  export let numCols
  export let margin
 
  const id = Math.floor(Math.random() * 10000)
 
- let custom = defaultPageHeight - 1
+ let custom = [100, 100]
  function updateCustom(e) {
      if (e.target.checked) {
-         const inch = parseFloat(prompt('Enter the height of your page in inches'))
-         if (!isNaN(inch)) custom = 25.4 * inch
+         const width = parseFloat(prompt('Enter the width of your page in inches'))
+         const height = parseFloat(prompt('Enter the height of your page in inches'))
+         console.log(width, height)
+         if (!isNaN(width) && !isNaN(height)) {
+             custom = [25.4 * width, 25.4 * height]
+         }
      }
  }
 </script>
@@ -21,28 +32,28 @@
     <fieldset>
         <legend>Page Type</legend>
         <label>
-            <input type="radio" bind:group={pageHeight} value={297} />
+            <input type="radio" bind:group={pageSize} value={A4} />
             <span>A4</span>
         </label>
         <label>
-            <input type="radio" bind:group={pageHeight} value={210} />
+            <input type="radio" bind:group={pageSize} value={A5} />
             <span>A5</span>
         </label>
         <label>
-            <input type="radio" bind:group={pageHeight} value={148}/>
+            <input type="radio" bind:group={pageSize} value={A6}/>
             <span>A6</span>
         </label>
         <label>
-            <input type="radio" bind:group={pageHeight} value={279}/>
+            <input type="radio" bind:group={pageSize} value={LETTER}/>
             <span>Letter</span>
         </label>
         <label>
-            <input type="radio" bind:group={pageHeight} value={356}/>
+            <input type="radio" bind:group={pageSize} value={LEGAL}/>
             <span>Legal</span>
         </label>
         <label>
-            <input type="radio" bind:group={pageHeight}
-                         on:change={updateCustom} value={custom} />
+            <input type="radio" value={custom} on:change={updateCustom}
+                   bind:group={pageSize} />
             <span>Custom</span>
         </label>
     </fieldset>

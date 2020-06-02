@@ -1,10 +1,11 @@
 <script>
  import { fade, fly } from 'svelte/transition';
- import { pageSize, clean, variant, stylesheet, style } from './fonts'
+ import { maxFonts, clean, variant, stylesheet, style, fontSize } from './fonts'
+ import { recheck, defaultWidth } from './fontchecker'
  import Popup from './Popup.svelte'
  import AlphabetSettings, { defaultAlphabets, describe } from './options/Alphabet.svelte'
  import FontSettings, { defaultStyles, defaultWeights } from './options/Font.svelte'
- import PageSettings, { defaultPageHeight } from './options/Page.svelte'
+ import PageSettings, { defaultPageSize, defaultMargin } from './options/Page.svelte'
 
  let visiblePopup = -1
  let sidevisible = false
@@ -15,15 +16,16 @@
  let weights = defaultWeights
  let sort = 'popularity'
  let preferVariant = 'thin'
- let pageHeight = defaultPageHeight
+ let pageSize = defaultPageSize
  let numPages = 3
  let numCols = 2
- let margin = 0
+ let margin = defaultMargin
 
  // Maintain the sorts that have already been fetched
  // Allows for more aggressive caching when it comes time to download
  let sortcache = new Set()
 
+ let maxWidth = defaultWidth
  let fetchedFonts = []
  $: document.body.style.overflow = sidevisible ? 'hidden' : null
  $: nicebets = alphabets.length ? alphabets : defaultAlphabets
@@ -43,8 +45,9 @@
  })
  $: sortcache.add(sort)
  $: numFonts = filteredFonts.length
- $: numChosen = pageSize(pageHeight, margin, numCols, numPages)
+ $: numChosen = maxFonts(alphabets.length, pageSize, margin, numCols, numPages)
  $: chosenFonts = filteredFonts.slice(0, numChosen)
+ $: recheck(chosenFonts, alphabets, width => maxWidth = width)
  $: if (numFonts < numChosen)  {
      for (let i = 0; i < (numCols - numFonts % numCols) % numCols; i++) {
          chosenFonts.push({
@@ -78,7 +81,7 @@
         <AlphabetSettings bind:alphabets={alphabets} />
         <FontSettings bind:styles={styles} bind:weights={weights}
                       bind:sort={sort} bind:preferVariant={preferVariant} />
-        <PageSettings bind:pageHeight={pageHeight} bind:numPages={numPages}
+        <PageSettings bind:pageSize={pageSize} bind:numPages={numPages}
                       bind:numCols={numCols} bind:margin={margin} />
     </section>
 {/if}
@@ -98,7 +101,7 @@
                           bind:sort={sort} bind:preferVariant={preferVariant} />
         </Popup>
         <Popup name={numPages + ' Pages'} id="2" bind:visible={visiblePopup}>
-            <PageSettings bind:pageHeight={pageHeight} bind:numPages={numPages}
+            <PageSettings bind:pageSize={pageSize} bind:numPages={numPages}
                           bind:numCols={numCols} bind:margin={margin} />
         </Popup>
         <button class="flex light" on:click={e => window.print()}>
@@ -111,7 +114,7 @@
         </button>
     </div>
 </section>
-<section class="fonts margined">
+<section class="fonts margined" style={`font-size: ${fontSize(maxWidth, pageSize[0], margin, numCols)}mm`}>
     {#await fonts}
         <!-- Loading screen -->
 	    {#each Array(numChosen) as _}

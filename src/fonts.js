@@ -1,9 +1,17 @@
- const FONT_HEIGHT = 40 // a font takes up 4 cm of vertical height
+import { defaultWidth} from './fontchecker'
 
-export function pageSize(height, margin, cols, pages) {
+/** Determins the height of a block of fonts */
+function blockHeight(nAlphabets, fontSize) {
+    return (fontSize*1.5 + 0.6) * 2*nAlphabets + fontSize*1.5 + 2.4
+}
+
+/** Determines the number of fonts that should be displayed */
+export function maxFonts(nAlphabets, size, margin, cols, pages) {
+    const [width, height] = size
     cols = Math.max(cols, 1) || 1
     pages = Math.max(pages, 1) || 1
-    return Math.floor( (height-margin) / FONT_HEIGHT) * cols * pages
+    const blockh = blockHeight(nAlphabets, fontSize(defaultWidth, width, margin, cols))
+    return Math.floor( (height-margin) / blockh) * cols * pages
 }
 
 export function clean(fonts) {
@@ -32,4 +40,8 @@ export function style(font, preferVariant, weights) {
         `font-family: "${font.family}"`,
         `font-weight: ${weight}`,
     ].join(';')
+}
+
+export function fontSize(width, pageWidth, margin, columns) {
+    return ((pageWidth - margin) / columns - 2.4) / width
 }
