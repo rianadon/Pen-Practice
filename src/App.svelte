@@ -68,11 +68,6 @@
      })
  }
 </script>
-{#if numCols > 2}
-    <p><strong style="color: #d44">
-        Using more than two columns may cut off text or print in a smaller font size. Make sure to preview your&nbsp;print!
-    </strong></p>
-{/if}
 {#if sidevisible}
     <section class="sidebg" transition:fade
              on:click={e => sidevisible = false}></section>
